@@ -6,122 +6,107 @@
 
 html, body {
   width: 100%;
+  height: 100%;
   overflow-x: hidden;
-  font-family: 'Arial', sans-serif;
-  background: #fff7ee;
+  font-family: Arial, sans-serif;
+  background: #fff6ec;
 }
 
-/* HERO */
+/* HERO CONTAINER */
 .hero {
+  position: relative;
   width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
+/* SLIDES */
 .slide {
-  width: 100%;
-  min-height: 100vh;
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
-  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .slide.active {
-  display: block;
+  opacity: 1;
+  z-index: 1;
 }
 
 /* OVERLAY */
 .overlay {
-  min-height: 100vh;
+  position: absolute;
+  inset: 0;
   background: rgba(0,0,0,0.45);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 25px;
+  padding: 24px;
   color: #fff;
-}
-
-/* ANIMATION */
-.animate {
-  animation: fadeSlide 1.2s ease-in-out;
-}
-
-@keyframes fadeSlide {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: fadeUp 1s ease;
 }
 
 /* LOGO */
 .logo {
-  width: 140px;
+  width: 130px;
   background: #fff;
   padding: 12px;
   border-radius: 14px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 /* TEXT */
 h1 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #ffd700;
 }
 
 p {
   font-size: 1rem;
-  margin: 12px 0 22px;
+  margin: 10px 0 20px;
 }
 
 /* BUTTON */
 .btn {
   background: linear-gradient(45deg, #b30000, #ffcc00);
   color: #000;
-  padding: 13px 30px;
+  padding: 14px 32px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  transition: transform 0.2s;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* FLOATING WHATSAPP */
+/* WHATSAPP FLOAT */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 18px;
   background: #25d366;
-  color: #fff;
-  font-size: 28px;
-  width: 55px;
-  height: 55px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
+  font-size: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   z-index: 999;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 1.4rem;
-  }
-
-  .logo {
-    width: 115px;
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
+  h1 { font-size: 1.4rem; }
+  p { font-size: 0.95rem; }
+  .logo { width: 115px; }
 }
