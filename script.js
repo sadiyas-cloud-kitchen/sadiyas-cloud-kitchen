@@ -1,12 +1,17 @@
-const slides = document.querySelectorAll(".slide");
-let current = 0;
+// PAGE LOADER
+window.addEventListener("load", () => {
+  const loader = document.getElementById("page-loader");
+  loader.style.opacity = "0";
+  loader.style.transition = "opacity 0.6s ease";
+  setTimeout(() => loader.style.display = "none", 600);
+});
 
-function showSlide(index) {
-  slides.forEach(slide => slide.classList.remove("active"));
-  slides[index].classList.add("active");
-}
+// SLIDER
+let slides = document.querySelectorAll(".slide");
+let index = 0;
 
 setInterval(() => {
-  current = (current + 1) % slides.length;
-  showSlide(current);
-}, 4000);
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 5000);
