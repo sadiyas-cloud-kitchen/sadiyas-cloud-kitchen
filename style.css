@@ -2,15 +2,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  font-family: 'Segoe UI', sans-serif;
+body {
   background: #fff7ef;
+  overflow-x: hidden;
 }
+
+/* LOADER */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #fff7ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ddd;
+  border-top: 4px solid #ff9800;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
 
 /* HERO */
 .hero {
@@ -20,131 +38,97 @@ html, body {
   overflow: hidden;
 }
 
-/* SLIDES */
 .slide {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0;
-  transform: scale(1.05);
-  transition: opacity 1s ease, transform 1.2s ease;
+  display: none;
 }
 
 .slide.active {
-  opacity: 1;
-  transform: scale(1);
+  display: block;
 }
 
-/* OVERLAY */
+/* DARK OVERLAY */
 .overlay {
-  height: 100%;
-  width: 100%;
+  position: absolute;
+  inset: 0;
   background: rgba(0,0,0,0.45);
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   text-align: center;
-  color: #fff;
+  padding: 20px;
 }
 
-/* LOGO */
 .logo {
   width: 140px;
+  max-width: 70%;
   margin-bottom: 15px;
 }
 
-/* TEXT */
-.overlay h1 {
-  font-size: 26px;
+h1 {
+  font-size: clamp(22px, 5vw, 38px);
   margin-bottom: 8px;
 }
 
-.overlay p {
-  font-size: 15px;
+p {
+  font-size: clamp(14px, 3.5vw, 18px);
   margin-bottom: 18px;
 }
 
-/* BUTTON */
 .btn {
-  background: linear-gradient(45deg, gold, orange);
-  color: #000;
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  color: #fff;
   padding: 12px 26px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* STEAM ANIMATION */
+/* STEAM */
 .steam {
   position: absolute;
-  top: 55%;
-  width: 100px;
-  height: 150px;
-  background: url('assets/steam.png') no-repeat center;
-  background-size: contain;
-  opacity: 0.7;
-  animation: steamUp 3s infinite ease-in-out;
+  bottom: 80px;
+  width: 120px;
+  opacity: 0.6;
+  animation: steamUp 4s ease-in-out infinite;
 }
 
 @keyframes steamUp {
-  0% { transform: translateY(0) scale(1); opacity: 0.2; }
-  50% { opacity: 0.7; }
-  100% { transform: translateY(-40px) scale(1.1); opacity: 0; }
+  0% { transform: translateY(0) scale(1); opacity: 0.6; }
+  100% { transform: translateY(-60px) scale(1.2); opacity: 0; }
 }
 
 /* WHATSAPP FLOAT */
 .whatsapp-float {
   position: fixed;
   right: 18px;
-  bottom: 20px;
+  bottom: 18px;
+  width: 56px;
+  height: 56px;
   background: #25d366;
   color: #fff;
-  width: 55px;
-  height: 55px;
   border-radius: 50%;
-  text-align: center;
-  line-height: 55px;
-  font-size: 26px;
-  z-index: 999;
-}
-
-/* PAGE LOADER */
-#page-loader {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle, #8b0000, #2b0000);
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 9999;
-}
-
-.loader-content {
-  text-align: center;
-}
-
-.loader-content img {
-  width: 150px;
-  animation: pulse 1.4s infinite;
-}
-
-.loader-content p {
-  color: gold;
-  margin-top: 15px;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-  100% { transform: scale(1); }
+  justify-content: center;
+  font-size: 26px;
+  text-decoration: none;
+  z-index: 999;
 }
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
-  .overlay h1 { font-size: 22px; }
-  .overlay p { font-size: 14px; }
-  .logo { width: 120px; }
+  .hero {
+    height: 100svh; /* FIXED MOBILE CUT */
+  }
+
+  .steam {
+    width: 90px;
+    bottom: 60px;
+  }
 }
