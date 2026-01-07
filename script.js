@@ -1,2 +1,1 @@
-// Reserved for future animations
-console.log("Sadiya's Cloud Kitchen loaded");
+document.body.classList.add("loaded");
