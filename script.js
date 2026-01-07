@@ -1,46 +1,44 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-  /* ---------------- CART ---------------- */
+  console.log("JS running");
+
+  /* ---------- CART ---------- */
   let cart = [];
 
   document.querySelectorAll(".add-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const name = btn.dataset.name;
-      const price = btn.dataset.price;
-      cart.push({ name, price });
+    btn.addEventListener("click", function () {
+      cart.push({
+        name: this.dataset.name,
+        price: this.dataset.price
+      });
       document.getElementById("cart-count").innerText = cart.length + " items";
     });
   });
 
-  document.getElementById("whatsappBtn").addEventListener("click", () => {
+  document.getElementById("whatsappBtn").addEventListener("click", function () {
     if (cart.length === 0) {
-      alert("Please add items first");
+      alert("Cart is empty");
       return;
     }
-    let msg = "Order from Sadiya's Cloud Kitchen:%0A";
+
+    let msg = "Order:%0A";
     cart.forEach(i => msg += `• ${i.name} - ₹${i.price}%0A`);
     window.open("https://wa.me/917549126937?text=" + msg);
   });
 
-  /* ---------------- TABS ---------------- */
+  /* ---------- TABS ---------- */
   document.querySelectorAll(".tab").forEach(tab => {
-    tab.addEventListener("click", () => {
-      document.querySelectorAll(".menu").forEach(m => m.classList.remove("show"));
-      document.getElementById(tab.dataset.target).classList.add("show");
+    tab.addEventListener("click", function () {
+
+      document.querySelectorAll(".menu").forEach(m => {
+        m.style.display = "none";
+      });
+
+      document.getElementById(this.dataset.target).style.display = "grid";
 
       document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
+      this.classList.add("active");
     });
   });
-
-  /* ---------------- HERO SLIDER ---------------- */
-  let slides = document.querySelectorAll(".hero-slide");
-  let index = 0;
-
-  setInterval(() => {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-  }, 3500);
 
 });
