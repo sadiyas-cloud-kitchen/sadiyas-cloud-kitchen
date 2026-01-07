@@ -8,72 +8,80 @@
 </head>
 <body>
 
-<div class="top-bar">📍 Ranchi | Order on WhatsApp</div>
+<!-- HERO SLIDER -->
+<section class="hero-slider">
+  <div class="hero-slide active">
+    <img src="assets/hero-biryani.png">
+    <div class="hero-text">
+      <h1>Complete Non-Veg Meal</h1>
+      <p>Authentic • Fresh • Homemade</p>
+    </div>
+  </div>
 
-<!-- HERO -->
-<section class="hero">
-  <img src="assets/hero-biryani.png" alt="">
-  <div class="hero-text">
-    <h1>Complete Non-Veg Meal</h1>
-    <p>Biryani • Gravy • Kabab • Sweet</p>
-    <a href="#menu" class="hero-btn">Order on WhatsApp</a>
+  <div class="hero-slide">
+    <img src="assets/chicken-kabab.png">
+    <div class="hero-text">
+      <h1>Red Fry Chicken Kabab</h1>
+      <p>Spicy • Crispy • Juicy</p>
+    </div>
   </div>
 </section>
 
-<!-- TABS -->
-<div class="tabs" id="menu">
-  <button class="tab active" data-tab="meals">Main Meals</button>
-  <button class="tab" data-tab="kababs">Kababs</button>
-  <button class="tab" data-tab="desserts">Desserts</button>
+<!-- CATEGORY TABS -->
+<div class="tabs">
+  <button onclick="showCategory('meals')" class="active">Main Meals</button>
+  <button onclick="showCategory('kababs')">Kababs</button>
+  <button onclick="showCategory('desserts')">Desserts</button>
 </div>
 
-<!-- MAIN MEALS -->
-<section class="menu active" id="meals">
+<!-- MEALS -->
+<section id="meals" class="menu show">
   <div class="card">
-    <span class="price">₹180</span>
     <img src="assets/hero-biryani.png">
+    <span class="price">₹180</span>
     <h3>Chicken Biryani</h3>
     <button onclick="addToCart('Chicken Biryani',180)">Add</button>
   </div>
 
   <div class="card">
-    <span class="price">₹260</span>
     <img src="assets/nonveg-meal.png">
+    <span class="price">₹260</span>
     <h3>Complete Non-Veg Meal</h3>
     <button onclick="addToCart('Non-Veg Meal',260)">Add</button>
   </div>
 </section>
 
 <!-- KABABS -->
-<section class="menu" id="kababs">
-  <div class="card slide">
-    <span class="price">₹220</span>
+<section id="kababs" class="menu">
+  <div class="card">
     <img src="assets/chicken-kabab.png">
+    <span class="price">₹220</span>
     <h3>Chicken Kabab</h3>
     <button onclick="addToCart('Chicken Kabab',220)">Add</button>
   </div>
 </section>
 
 <!-- DESSERTS -->
-<section class="menu" id="desserts">
-  <div class="card fade">
-    <span class="price">₹90</span>
+<section id="desserts" class="menu">
+  <div class="card">
     <img src="assets/gajar-halwa.png">
-    <h3>Gajar Halwa</h3>
+    <span class="price">₹90</span>
+    <h3>Gajar Ka Halwa</h3>
     <button onclick="addToCart('Gajar Halwa',90)">Add</button>
   </div>
 
-  <div class="card fade">
-    <span class="price">₹110</span>
+  <div class="card">
     <img src="assets/apricot-pudding.png">
+    <span class="price">₹110</span>
     <h3>Apricot Pudding</h3>
     <button onclick="addToCart('Apricot Pudding',110)">Add</button>
   </div>
 </section>
 
-<!-- CART -->
-<div class="cart" onclick="sendWhatsApp()">
-🛒 <span id="count">0</span>
+<!-- STICKY ORDER BAR -->
+<div class="order-bar">
+  <span id="cart-count">0 items</span>
+  <button onclick="sendWhatsApp()">Order Now</button>
 </div>
 
 <script src="script.js"></script>
