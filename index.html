@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Sadiya's Cloud Kitchen</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- LOGO -->
+<div class="logo-container">
+  <img src="assets/logo.png" alt="Sadiya's Cloud Kitchen">
+</div>
+
+<!-- HERO SLIDER -->
 <section class="hero">
 
   <div class="slide active" style="background-image:url('assets/hero-biryani.png')">
-    <div class="overlay">
-      <img src="assets/logo.png" class="logo">
+    <div class="hero-content">
       <h1>Bangalore-Style Mutton Biryani</h1>
       <p>Prepared fresh only after you order</p>
       <a href="https://wa.me/917549126937" class="btn">Order on WhatsApp</a>
@@ -21,7 +26,7 @@
   </div>
 
   <div class="slide" style="background-image:url('assets/chicken-kabab.png')">
-    <div class="overlay">
+    <div class="hero-content">
       <h1>Red Fry Chicken Kabab</h1>
       <p>Spicy • Crispy • Irresistible</p>
       <a href="https://wa.me/917549126937" class="btn">Order on WhatsApp</a>
@@ -29,7 +34,7 @@
   </div>
 
   <div class="slide" style="background-image:url('assets/nonveg-meal.png')">
-    <div class="overlay">
+    <div class="hero-content">
       <h1>Complete Non-Veg Meal</h1>
       <p>Biryani • Gravy • Kabab • Sweet</p>
       <a href="https://wa.me/917549126937" class="btn">Order on WhatsApp</a>
@@ -38,8 +43,10 @@
 
 </section>
 
-<!-- WhatsApp Floating -->
-<a href="https://wa.me/917549126937" class="whatsapp-float">💬</a>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/917549126937" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
 <script src="script.js"></script>
 </body>
