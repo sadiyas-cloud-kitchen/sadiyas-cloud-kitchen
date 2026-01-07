@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sadiya's Cloud Kitchen</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sadiya’s Cloud Kitchen</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-overlay">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
     <h1>Complete Non-Veg Meal</h1>
     <p>Biryani • Gravy • Kabab • Sweet</p>
-    <a href="https://wa.me/919999999999" class="btn">Order on WhatsApp</a>
+
+    <a class="cta"
+       href="https://wa.me/917549126937"
+       target="_blank">
+      Order on WhatsApp
+    </a>
   </div>
 </section>
 
-<!-- MENU SECTION -->
+<!-- MENU -->
 <section class="menu">
   <h2>Our Menu</h2>
 
-  <div class="menu-group">
-    <h3>Main Meals</h3>
-    <ul>
-      <li>Chicken Biryani</li>
-      <li>Mutton Biryani</li>
-      <li>Complete Non-Veg Meal</li>
-      <li>Veg Thali</li>
-    </ul>
-  </div>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <img src="assets/nonveg-meal.png" alt="Non Veg Meal">
+      <h3>Complete Non-Veg Meal</h3>
+    </div>
 
-  <div class="menu-group">
-    <h3>Starters</h3>
-    <ul>
-      <li>Chicken Kabab</li>
-      <li>Chicken 65</li>
-      <li>Fried Chicken</li>
-    </ul>
+    <div class="menu-card">
+      <img src="assets/chicken-kabab.png" alt="Chicken Kabab">
+      <h3>Chicken Kabab</h3>
+    </div>
   </div>
 </section>
 
-<!-- DESSERT SECTION -->
-<section class="dessert">
+<!-- DESSERTS -->
+<section class="desserts">
   <h2>Sweet Endings</h2>
 
   <div class="dessert-grid">
     <div class="dessert-card">
-      <img src="images/apricot.jpg" alt="Apricot Pudding">
-      <p>Apricot Pudding</p>
+      <img src="assets/apricot-pudding.png" alt="Apricot Pudding">
+      <h3>Apricot Pudding</h3>
     </div>
 
     <div class="dessert-card">
-      <img src="images/halwa.jpg" alt="Gajar Ka Halwa">
-      <p>Gajar Ka Halwa</p>
+      <img src="assets/gajar-halwa.png" alt="Gajar Halwa">
+      <h3>Gajar Ka Halwa</h3>
     </div>
   </div>
 </section>
 
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp-float"
+   href="https://wa.me/917549126937"
+   target="_blank">💬</a>
+
+<script src="script.js"></script>
 </body>
 </html>
