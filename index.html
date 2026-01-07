@@ -12,26 +12,17 @@
 <section class="hero-slider">
   <div class="hero-slide active">
     <img src="assets/hero-biryani.png">
-    <div class="hero-text">
-      <h1>Complete Non-Veg Meal</h1>
-      <p>Authentic • Fresh • Homemade</p>
-    </div>
   </div>
-
   <div class="hero-slide">
     <img src="assets/chicken-kabab.png">
-    <div class="hero-text">
-      <h1>Red Fry Chicken Kabab</h1>
-      <p>Spicy • Crispy • Juicy</p>
-    </div>
   </div>
 </section>
 
 <!-- CATEGORY TABS -->
 <div class="tabs">
-  <button onclick="showCategory('meals')" class="active">Main Meals</button>
-  <button onclick="showCategory('kababs')">Kababs</button>
-  <button onclick="showCategory('desserts')">Desserts</button>
+  <button class="active" onclick="showCategory('meals', this)">Main Meals</button>
+  <button onclick="showCategory('kababs', this)">Kababs</button>
+  <button onclick="showCategory('desserts', this)">Desserts</button>
 </div>
 
 <!-- MEALS -->
@@ -81,7 +72,7 @@
 <!-- STICKY ORDER BAR -->
 <div class="order-bar">
   <span id="cart-count">0 items</span>
-  <button onclick="sendWhatsApp()">Order Now</button>
+  <button onclick="sendWhatsApp()">Order on WhatsApp</button>
 </div>
 
 <script src="script.js"></script>
