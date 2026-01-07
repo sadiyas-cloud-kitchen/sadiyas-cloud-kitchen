@@ -1,35 +1,33 @@
-let cart=[]
-let count=document.getElementById("count")
+let cart = [];
+let slideIndex = 0;
 
-function addToCart(name,price){
-  cart.push({name,price})
-  count.innerText=cart.length
+/* HERO AUTO SLIDE */
+setInterval(() => {
+  const slides = document.querySelectorAll('.hero-slide');
+  slides[slideIndex].classList.remove('active');
+  slideIndex = (slideIndex + 1) % slides.length;
+  slides[slideIndex].classList.add('active');
+}, 3500);
+
+/* CATEGORY */
+function showCategory(id) {
+  document.querySelectorAll('.menu').forEach(m => m.classList.remove('show'));
+  document.getElementById(id).classList.add('show');
+
+  document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
 }
 
-function sendWhatsApp(){
-  if(cart.length===0){
-    alert("Cart is empty")
-    return
-  }
-
-  let msg="Hello, I want to order:%0A"
-  let total=0
-
-  cart.forEach(i=>{
-    msg+=`• ${i.name} - ₹${i.price}%0A`
-    total+=i.price
-  })
-
-  msg+=`%0ATotal: ₹${total}`
-  window.open(`https://wa.me/917549126937?text=${msg}`)
+/* CART */
+function addToCart(name, price) {
+  cart.push({ name, price });
+  document.getElementById('cart-count').innerText =
+    cart.length + " items";
 }
 
-/* TAB SWITCH */
-document.querySelectorAll(".tab").forEach(tab=>{
-  tab.onclick=()=>{
-    document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"))
-    document.querySelectorAll(".menu").forEach(m=>m.classList.remove("active"))
-    tab.classList.add("active")
-    document.getElementById(tab.dataset.tab).classList.add("active")
-  }
-})
+/* WHATSAPP */
+function sendWhatsApp() {
+  let msg = "Order from Sadiya's Cloud Kitchen:%0A";
+  cart.forEach(i => msg += `• ${i.name} - ₹${i.price}%0A`);
+  window.open("https://wa.me/917549126937?text=" + msg);
+}
