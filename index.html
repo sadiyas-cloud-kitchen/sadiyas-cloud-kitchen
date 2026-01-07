@@ -1,83 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sadiya's Cloud Kitchen</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<title>Sadiya's Cloud Kitchen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- STICKY ORDER BAR -->
-<div class="top-bar">
-  📍 Ranchi | <a href="https://wa.me/917549126937">Order on WhatsApp</a>
-</div>
+<div class="top-bar">📍 Ranchi | Order on WhatsApp</div>
 
 <!-- HERO -->
 <section class="hero">
-  <img src="assets/nonveg-meal.png" alt="Non Veg Meal">
-  <div class="hero-overlay">
+  <img src="assets/hero-biryani.png" alt="">
+  <div class="hero-text">
     <h1>Complete Non-Veg Meal</h1>
     <p>Biryani • Gravy • Kabab • Sweet</p>
-    <a href="https://wa.me/917549126937" class="btn">Order on WhatsApp</a>
+    <a href="#menu" class="hero-btn">Order on WhatsApp</a>
   </div>
 </section>
 
-<!-- CATEGORY TABS -->
-<section class="tabs">
+<!-- TABS -->
+<div class="tabs" id="menu">
   <button class="tab active" data-tab="meals">Main Meals</button>
   <button class="tab" data-tab="kababs">Kababs</button>
   <button class="tab" data-tab="desserts">Desserts</button>
+</div>
+
+<!-- MAIN MEALS -->
+<section class="menu active" id="meals">
+  <div class="card">
+    <span class="price">₹180</span>
+    <img src="assets/hero-biryani.png">
+    <h3>Chicken Biryani</h3>
+    <button onclick="addToCart('Chicken Biryani',180)">Add</button>
+  </div>
+
+  <div class="card">
+    <span class="price">₹260</span>
+    <img src="assets/nonveg-meal.png">
+    <h3>Complete Non-Veg Meal</h3>
+    <button onclick="addToCart('Non-Veg Meal',260)">Add</button>
+  </div>
 </section>
 
-<!-- MENU -->
-<section class="menu">
-
-  <!-- MEALS -->
-  <div class="menu-group active" id="meals">
-    <div class="card special">
-      <img src="assets/hero-biryani.png">
-      <h3>Chicken Biryani <span>₹180</span></h3>
-      <small>🔥 Today’s Special</small>
-    </div>
-
-    <div class="card">
-      <img src="assets/nonveg-meal.png">
-      <h3>Complete Non-Veg Meal <span>₹299</span></h3>
-    </div>
+<!-- KABABS -->
+<section class="menu" id="kababs">
+  <div class="card slide">
+    <span class="price">₹220</span>
+    <img src="assets/chicken-kabab.png">
+    <h3>Chicken Kabab</h3>
+    <button onclick="addToCart('Chicken Kabab',220)">Add</button>
   </div>
-
-  <!-- KABABS -->
-  <div class="menu-group" id="kababs">
-    <div class="card">
-      <img src="assets/chicken-kabab.png">
-      <h3>Red Fry Chicken Kabab <span>₹220</span></h3>
-    </div>
-  </div>
-
-  <!-- DESSERTS -->
-  <div class="menu-group" id="desserts">
-    <div class="card">
-      <img src="assets/apricot-pudding.png">
-      <h3>Apricot Pudding <span>₹120</span></h3>
-    </div>
-
-    <div class="card">
-      <img src="assets/gajar-halwa.png">
-      <h3>Gajar Ka Halwa <span>₹100</span></h3>
-    </div>
-  </div>
-
 </section>
 
-<!-- FLOATING BUTTONS -->
-<a href="https://wa.me/917549126937" class="whatsapp">💬</a>
-<a href="tel:+917549126937" class="call">📞</a>
+<!-- DESSERTS -->
+<section class="menu" id="desserts">
+  <div class="card fade">
+    <span class="price">₹90</span>
+    <img src="assets/gajar-halwa.png">
+    <h3>Gajar Halwa</h3>
+    <button onclick="addToCart('Gajar Halwa',90)">Add</button>
+  </div>
 
-<!-- FOOTER -->
-<footer>
-  ✔ Freshly Prepared • ✔ Hygienic Kitchen • ✔ Home Delivery
-</footer>
+  <div class="card fade">
+    <span class="price">₹110</span>
+    <img src="assets/apricot-pudding.png">
+    <h3>Apricot Pudding</h3>
+    <button onclick="addToCart('Apricot Pudding',110)">Add</button>
+  </div>
+</section>
+
+<!-- CART -->
+<div class="cart" onclick="sendWhatsApp()">
+🛒 <span id="count">0</span>
+</div>
 
 <script src="script.js"></script>
 </body>
