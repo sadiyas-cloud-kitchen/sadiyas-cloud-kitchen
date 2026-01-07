@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sadiya's Cloud Kitchen</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,75 +10,70 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-slide active" style="background-image:url('images/hero1.jpg')"></div>
-  <div class="hero-slide" style="background-image:url('images/hero2.jpg')"></div>
-  <div class="hero-slide" style="background-image:url('images/hero3.jpg')"></div>
+  <img src="assets/hero-biryani.png" alt="Hero Food">
 </section>
 
 <!-- CATEGORY BUTTONS -->
-<section class="categories">
+<div class="categories">
   <button onclick="filterMenu('all')">All</button>
   <button onclick="filterMenu('kabab')">Kababs</button>
   <button onclick="filterMenu('dessert')">Desserts</button>
-</section>
+</div>
 
 <!-- MENU -->
 <section class="menu">
 
   <!-- KABAB -->
   <div class="item kabab">
-    <img src="images/kabab1.jpg">
+    <img src="assets/chicken-kabab.png">
     <span class="price">₹220</span>
     <h3>Chicken Kabab</h3>
-    <button onclick="addToCart('Chicken Kabab',220)">Add</button>
+    <button onclick="addToCart()">Add</button>
   </div>
 
   <div class="item kabab">
-    <img src="images/kabab2.jpg">
-    <span class="price">₹250</span>
-    <h3>Seekh Kabab</h3>
-    <button onclick="addToCart('Seekh Kabab',250)">Add</button>
+    <img src="assets/nonveg-meal.png">
+    <span class="price">₹280</span>
+    <h3>Non-Veg Meal</h3>
+    <button onclick="addToCart()">Add</button>
   </div>
 
   <!-- DESSERT -->
   <div class="item dessert">
-    <img src="images/dessert1.jpg">
+    <img src="assets/gajar-halwa.png">
     <span class="price">₹120</span>
-    <h3>Gulab Jamun</h3>
-    <button onclick="addToCart('Gulab Jamun',120)">Add</button>
+    <h3>Gajar Halwa</h3>
+    <button onclick="addToCart()">Add</button>
   </div>
 
   <div class="item dessert">
-    <img src="images/dessert2.jpg">
+    <img src="assets/apricot-pudding.png">
     <span class="price">₹150</span>
-    <h3>Brownie</h3>
-    <button onclick="addToCart('Brownie',150)">Add</button>
+    <h3>Apricot Pudding</h3>
+    <button onclick="addToCart()">Add</button>
   </div>
 
 </section>
 
-<!-- CONTENT SECTION -->
+<!-- CONTENT -->
 <section class="content">
-  <h2>Why Choose Us?</h2>
-  <p>Freshly prepared food, hygienic kitchen, premium taste and fast delivery.</p>
+  <h2>Fresh • Hygienic • Home Style</h2>
+  <p>Authentic taste prepared daily with premium ingredients.</p>
 </section>
 
-<!-- BULK ORDER FORM -->
+<!-- BULK ORDER -->
 <section class="bulk">
   <h2>Bulk / Party Orders</h2>
   <input id="plates" type="number" placeholder="Number of Plates">
-  <input id="event" type="text" placeholder="Event Type">
-  <button onclick="sendQuotation()">Get Quotation on WhatsApp</button>
+  <button onclick="sendWhatsapp()">Get Quotation</button>
 </section>
 
 <!-- CART -->
-<div class="cart">
-  🛒 Cart: <span id="cart-count">0</span>
-</div>
+<div class="cart">🛒 <span id="cart">0</span></div>
 
-<!-- STICKY ORDER BAR -->
+<!-- STICKY BAR -->
 <div class="order-bar">
-  <a href="https://wa.me/917549126937" target="_blank">Order on WhatsApp</a>
+  <a href="https://wa.me/917549126937">Order on WhatsApp</a>
 </div>
 
 <script src="script.js"></script>
