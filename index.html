@@ -1,59 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Sadiya's Cloud Kitchen</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<!-- STICKY ORDER BAR -->
+<div class="top-bar">
+  📍 Ranchi | <a href="https://wa.me/917549126937">Order on WhatsApp</a>
+</div>
+
 <!-- HERO -->
 <section class="hero">
-  <img src="assets/hero-biryani.png" class="hero-bg" alt="Biryani">
-  <img src="assets/steam.png" class="steam">
-
-  <div class="hero-content">
+  <img src="assets/nonveg-meal.png" alt="Non Veg Meal">
+  <div class="hero-overlay">
     <h1>Complete Non-Veg Meal</h1>
     <p>Biryani • Gravy • Kabab • Sweet</p>
-    <a href="https://wa.me/917549126937" class="btn pulse">Order on WhatsApp</a>
+    <a href="https://wa.me/917549126937" class="btn">Order on WhatsApp</a>
   </div>
+</section>
+
+<!-- CATEGORY TABS -->
+<section class="tabs">
+  <button class="tab active" data-tab="meals">Main Meals</button>
+  <button class="tab" data-tab="kababs">Kababs</button>
+  <button class="tab" data-tab="desserts">Desserts</button>
 </section>
 
 <!-- MENU -->
 <section class="menu">
-  <h2>Our Menu</h2>
 
-  <div class="menu-card">
-    <h3>Main Meals</h3>
-    <ul>
-      <li>Chicken Biryani</li>
-      <li>Mutton Biryani</li>
-      <li>Complete Non-Veg Meal</li>
-      <li>Red Fry Chicken Kabab</li>
-    </ul>
+  <!-- MEALS -->
+  <div class="menu-group active" id="meals">
+    <div class="card special">
+      <img src="assets/hero-biryani.png">
+      <h3>Chicken Biryani <span>₹180</span></h3>
+      <small>🔥 Today’s Special</small>
+    </div>
+
+    <div class="card">
+      <img src="assets/nonveg-meal.png">
+      <h3>Complete Non-Veg Meal <span>₹299</span></h3>
+    </div>
   </div>
-</section>
 
-<!-- DESSERTS -->
-<section class="desserts">
-  <h2>Sweet Endings</h2>
+  <!-- KABABS -->
+  <div class="menu-group" id="kababs">
+    <div class="card">
+      <img src="assets/chicken-kabab.png">
+      <h3>Red Fry Chicken Kabab <span>₹220</span></h3>
+    </div>
+  </div>
 
-  <div class="dessert-grid">
-    <div class="dessert-card">
+  <!-- DESSERTS -->
+  <div class="menu-group" id="desserts">
+    <div class="card">
       <img src="assets/apricot-pudding.png">
-      <h3>Apricot Pudding</h3>
+      <h3>Apricot Pudding <span>₹120</span></h3>
     </div>
 
-    <div class="dessert-card">
+    <div class="card">
       <img src="assets/gajar-halwa.png">
-      <h3>Gajar Ka Halwa</h3>
+      <h3>Gajar Ka Halwa <span>₹100</span></h3>
     </div>
   </div>
+
 </section>
 
-<!-- FLOATING WHATSAPP -->
+<!-- FLOATING BUTTONS -->
 <a href="https://wa.me/917549126937" class="whatsapp">💬</a>
+<a href="tel:+917549126937" class="call">📞</a>
+
+<!-- FOOTER -->
+<footer>
+  ✔ Freshly Prepared • ✔ Hygienic Kitchen • ✔ Home Delivery
+</footer>
 
 <script src="script.js"></script>
 </body>
