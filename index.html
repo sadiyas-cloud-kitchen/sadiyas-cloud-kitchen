@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- HERO SLIDER -->
+<!-- HERO -->
 <section class="hero-slider">
   <div class="hero-slide active">
     <img src="assets/hero-biryani.png">
@@ -18,11 +18,11 @@
   </div>
 </section>
 
-<!-- CATEGORY TABS -->
+<!-- TABS -->
 <div class="tabs">
-  <button class="active" onclick="showCategory('meals', this)">Main Meals</button>
-  <button onclick="showCategory('kababs', this)">Kababs</button>
-  <button onclick="showCategory('desserts', this)">Desserts</button>
+  <button class="tab active" data-target="meals">Main Meals</button>
+  <button class="tab" data-target="kababs">Kababs</button>
+  <button class="tab" data-target="desserts">Desserts</button>
 </div>
 
 <!-- MEALS -->
@@ -31,14 +31,14 @@
     <img src="assets/hero-biryani.png">
     <span class="price">₹180</span>
     <h3>Chicken Biryani</h3>
-    <button onclick="addToCart('Chicken Biryani',180)">Add</button>
+    <button class="add-btn" data-name="Chicken Biryani" data-price="180">Add</button>
   </div>
 
   <div class="card">
     <img src="assets/nonveg-meal.png">
     <span class="price">₹260</span>
     <h3>Complete Non-Veg Meal</h3>
-    <button onclick="addToCart('Non-Veg Meal',260)">Add</button>
+    <button class="add-btn" data-name="Non-Veg Meal" data-price="260">Add</button>
   </div>
 </section>
 
@@ -48,7 +48,7 @@
     <img src="assets/chicken-kabab.png">
     <span class="price">₹220</span>
     <h3>Chicken Kabab</h3>
-    <button onclick="addToCart('Chicken Kabab',220)">Add</button>
+    <button class="add-btn" data-name="Chicken Kabab" data-price="220">Add</button>
   </div>
 </section>
 
@@ -58,21 +58,21 @@
     <img src="assets/gajar-halwa.png">
     <span class="price">₹90</span>
     <h3>Gajar Ka Halwa</h3>
-    <button onclick="addToCart('Gajar Halwa',90)">Add</button>
+    <button class="add-btn" data-name="Gajar Halwa" data-price="90">Add</button>
   </div>
 
   <div class="card">
     <img src="assets/apricot-pudding.png">
     <span class="price">₹110</span>
     <h3>Apricot Pudding</h3>
-    <button onclick="addToCart('Apricot Pudding',110)">Add</button>
+    <button class="add-btn" data-name="Apricot Pudding" data-price="110">Add</button>
   </div>
 </section>
 
-<!-- STICKY ORDER BAR -->
+<!-- ORDER BAR -->
 <div class="order-bar">
   <span id="cart-count">0 items</span>
-  <button onclick="sendWhatsApp()">Order on WhatsApp</button>
+  <button id="whatsappBtn">Order on WhatsApp</button>
 </div>
 
 <script src="script.js"></script>
