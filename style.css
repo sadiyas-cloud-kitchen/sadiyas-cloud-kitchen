@@ -6,8 +6,8 @@ body {
 
 /* HERO */
 .hero-slider {
-  position: relative;
   height: 55vh;
+  position: relative;
   overflow: hidden;
 }
 
@@ -28,17 +28,6 @@ body {
   object-fit: cover;
 }
 
-.hero-text {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
 /* TABS */
 .tabs {
   display: flex;
@@ -48,9 +37,9 @@ body {
 }
 
 .tabs button {
-  border: none;
   padding: 10px 18px;
   border-radius: 20px;
+  border: none;
   background: #eee;
 }
 
@@ -76,7 +65,6 @@ body {
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  animation: glow 3s infinite;
 }
 
 .card img {
@@ -109,7 +97,7 @@ body {
   border-radius: 20px;
 }
 
-/* STICKY BAR */
+/* ORDER BAR */
 .order-bar {
   position: fixed;
   bottom: 0;
@@ -127,11 +115,4 @@ body {
   padding: 8px 18px;
   border-radius: 20px;
   color: white;
-}
-
-/* ANIMATION */
-@keyframes glow {
-  0% { box-shadow: 0 0 8px #b3001b; }
-  50% { box-shadow: 0 0 18px #ff4d4d; }
-  100% { box-shadow: 0 0 8px #b3001b; }
 }
