@@ -6,29 +6,22 @@
 }
 
 body {
-  background: #fff7ef;
+  background: #000;
   overflow-x: hidden;
 }
 
-/* LOADER */
-#loader {
+/* Page Loader */
+.page-loader {
   position: fixed;
   inset: 0;
-  background: #fff7ef;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #000;
   z-index: 9999;
+  animation: fadeOut 1.2s ease forwards;
 }
-.spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid #ddd;
-  border-top: 4px solid #ff9800;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
 }
-@keyframes spin { to { transform: rotate(360deg); } }
 
 /* HERO */
 .hero {
@@ -41,94 +34,106 @@ body {
 .slide {
   position: absolute;
   inset: 0;
-  background-size: cover;
   background-position: center;
-  display: none;
+  background-repeat: no-repeat;
+  background-size: contain;   /* 🔑 KEY FIX */
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .slide.active {
-  display: block;
+  opacity: 1;
 }
 
-/* DARK OVERLAY */
+/* Overlay */
 .overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
+  background: rgba(0,0,0,0.6);
   padding: 20px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 420px;
 }
 
 .logo {
-  width: 140px;
-  max-width: 70%;
-  margin-bottom: 15px;
+  width: 130px;
+  margin-bottom: 10px;
 }
 
 h1 {
-  font-size: clamp(22px, 5vw, 38px);
-  margin-bottom: 8px;
+  font-size: 1.6rem;
+  color: #FFD700;
 }
 
 p {
-  font-size: clamp(14px, 3.5vw, 18px);
-  margin-bottom: 18px;
+  color: #fff;
+  margin: 10px 0;
 }
 
 .btn {
-  background: linear-gradient(45deg, #ff9800, #ff5722);
-  color: #fff;
-  padding: 12px 26px;
+  display: inline-block;
+  background: linear-gradient(45deg, #c30000, #ffd700);
+  color: #000;
+  padding: 12px 22px;
   border-radius: 30px;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
 }
 
-/* STEAM */
+/* Steam Animation */
 .steam {
   position: absolute;
-  bottom: 80px;
-  width: 120px;
-  opacity: 0.6;
-  animation: steamUp 4s ease-in-out infinite;
+  bottom: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  opacity: 0.7;
+  animation: steam 4s infinite ease-in-out;
 }
 
-@keyframes steamUp {
-  0% { transform: translateY(0) scale(1); opacity: 0.6; }
-  100% { transform: translateY(-60px) scale(1.2); opacity: 0; }
+@keyframes steam {
+  0% { transform: translate(-50%,0); opacity:0.3; }
+  50% { transform: translate(-50%,-30px); opacity:0.6; }
+  100% { transform: translate(-50%,-60px); opacity:0; }
 }
 
-/* WHATSAPP FLOAT */
+/* WhatsApp Floating */
 .whatsapp-float {
   position: fixed;
-  right: 18px;
-  bottom: 18px;
-  width: 56px;
-  height: 56px;
-  background: #25d366;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
   color: #fff;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 26px;
-  text-decoration: none;
   z-index: 999;
 }
 
-/* MOBILE FIX */
+/* 🔥 MOBILE FIX */
 @media (max-width: 768px) {
   .hero {
-    height: 100svh; /* FIXED MOBILE CUT */
+    height: 85vh;      /* 🔑 FIX */
+  }
+
+  .slide {
+    background-size: cover;   /* Better mobile crop */
+  }
+
+  h1 {
+    font-size: 1.3rem;
   }
 
   .steam {
-    width: 90px;
-    bottom: 60px;
+    width: 110px;
+    bottom: 45%;
   }
 }
