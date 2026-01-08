@@ -34,13 +34,25 @@ function sendCart() {
     return;
   }
 
-  let msg = "Order Details:\n";
-  cart.forEach(i => msg += `• ${i.name} - ₹${i.price}\n`);
-  window.open("https://wa.me/917549126937?text=" + encodeURIComponent(msg));
+  let total = 0;
+  let msg = "Order Details:\n\n";
+
+  cart.forEach(i => {
+    msg += `• ${i.name} - ₹${i.price}\n`;
+    total += i.price;
+  });
+
+  msg += `\nTotal Amount: ₹${total}`;
+
+  window.open(
+    "https://wa.me/917549126937?text=" + encodeURIComponent(msg)
+  );
 }
 
 function sendQuotation() {
   const plates = document.getElementById("plates").value;
-  const msg = `Bulk Order Request\nPlates: ${plates}`;
-  window.open("https://wa.me/917549126937?text=" + encodeURIComponent(msg));
+  const msg = `Bulk Order Request\nPlates Required: ${plates}`;
+  window.open(
+    "https://wa.me/917549126937?text=" + encodeURIComponent(msg)
+  );
 }
