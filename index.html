@@ -8,9 +8,9 @@
 </head>
 <body>
 
-<!-- HERO -->
+<!-- HERO SLIDER -->
 <section class="hero">
-  <img src="assets/hero-biryani.png" alt="Hero Food">
+  <img id="heroImg" src="assets/hero-biryani.png" alt="Hero Food">
 </section>
 
 <!-- CATEGORY BUTTONS -->
@@ -23,49 +23,49 @@
 <!-- MENU -->
 <section class="menu">
 
-  <!-- KABAB -->
+  <!-- KABABS -->
   <div class="item kabab">
     <img src="assets/chicken-kabab.png">
     <span class="price">₹220</span>
     <h3>Chicken Kabab</h3>
-    <button onclick="addToCart()">Add</button>
+    <button onclick="addToCart('Chicken Kabab',220)">Add</button>
   </div>
 
   <div class="item kabab">
     <img src="assets/nonveg-meal.png">
     <span class="price">₹280</span>
     <h3>Non-Veg Meal</h3>
-    <button onclick="addToCart()">Add</button>
+    <button onclick="addToCart('Non-Veg Meal',280)">Add</button>
   </div>
 
-  <!-- DESSERT -->
+  <!-- DESSERTS -->
   <div class="item dessert">
     <img src="assets/gajar-halwa.png">
     <span class="price">₹120</span>
     <h3>Gajar Halwa</h3>
-    <button onclick="addToCart()">Add</button>
+    <button onclick="addToCart('Gajar Halwa',120)">Add</button>
   </div>
 
   <div class="item dessert">
     <img src="assets/apricot-pudding.png">
     <span class="price">₹150</span>
     <h3>Apricot Pudding</h3>
-    <button onclick="addToCart()">Add</button>
+    <button onclick="addToCart('Apricot Pudding',150)">Add</button>
   </div>
 
 </section>
 
 <!-- CONTENT -->
 <section class="content">
-  <h2>Fresh • Hygienic • Home Style</h2>
-  <p>Authentic taste prepared daily with premium ingredients.</p>
+  <h2>Why Choose Us?</h2>
+  <p>✔ Fresh daily cooking<br>✔ Hygienic kitchen<br>✔ Authentic home-style taste</p>
 </section>
 
 <!-- BULK ORDER -->
 <section class="bulk">
   <h2>Bulk / Party Orders</h2>
   <input id="plates" type="number" placeholder="Number of Plates">
-  <button onclick="sendWhatsapp()">Get Quotation</button>
+  <button onclick="sendQuotation()">Get Quotation</button>
 </section>
 
 <!-- CART -->
@@ -73,7 +73,7 @@
 
 <!-- STICKY BAR -->
 <div class="order-bar">
-  <a href="https://wa.me/917549126937">Order on WhatsApp</a>
+  <button onclick="sendCart()">Order on WhatsApp</button>
 </div>
 
 <script src="script.js"></script>
