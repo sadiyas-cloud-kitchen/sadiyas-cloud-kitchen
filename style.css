@@ -50,10 +50,13 @@ body {
   box-shadow: 0 6px 14px rgba(0,0,0,0.08);
 }
 
+/* ✅ FIXED MENU IMAGE CUTTING */
 .item img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 140px;
+  object-fit: contain;
+  background: #fff;
+  padding: 6px;
 }
 
 .price {
@@ -129,7 +132,7 @@ body {
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-/* BULK – MATCHED */
+/* BULK */
 .bulk {
   background: linear-gradient(135deg, #fff3e0, #ffe0b2);
   margin: 20px 15px 90px;
@@ -192,7 +195,9 @@ body {
   font-weight: bold;
 }
 
-/* GALLERY */
+/* ======================
+   GALLERY (FIXED)
+====================== */
 .gallery {
   padding: 30px 15px;
   text-align: center;
@@ -217,10 +222,13 @@ body {
   animation: fadeUp 0.8s ease forwards;
 }
 
+/* ✅ FIXED GALLERY IMAGE CUTTING */
 .gallery-item img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 130px;
+  object-fit: contain;
+  background: #fff;
+  padding: 8px;
 }
 
 .gallery-item p {
