@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sadiya's Cloud Kitchen</title>
+  <title>Sadiya's Cloud Kitchen | Home Style Food in Ranchi</title>
+  <meta name="description" content="Sadiya's Cloud Kitchen in Ranchi offers hygienic, home-style kababs, meals & desserts. Order easily on WhatsApp.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HERO SLIDER -->
+<!-- HERO -->
 <section class="hero">
-  <img id="heroImg" src="assets/hero-biryani.png" alt="Hero Food">
+  <img id="heroImg" src="assets/hero-biryani.png" alt="Sadiya's Cloud Kitchen Food">
 </section>
 
 <!-- CATEGORY BUTTONS -->
@@ -24,7 +25,6 @@
 <!-- MENU -->
 <section class="menu">
 
-  <!-- KABABS -->
   <div class="item kabab">
     <img src="assets/chicken-kabab.png">
     <span class="price">₹220</span>
@@ -39,7 +39,6 @@
     <button onclick="addToCart('Non-Veg Meal',280)">Add</button>
   </div>
 
-  <!-- DESSERTS -->
   <div class="item dessert">
     <img src="assets/gajar-halwa.png">
     <span class="price">₹120</span>
@@ -54,7 +53,6 @@
     <button onclick="addToCart('Apricot Pudding',150)">Add</button>
   </div>
 
-  <!-- COMBOS -->
   <div class="item combo">
     <span class="price">₹499</span>
     <h3>Family Combo</h3>
@@ -74,10 +72,10 @@
 <!-- WHY US -->
 <section class="content">
   <h2>Why Choose Us?</h2>
-  <p>✔ Fresh Daily Cooking<br>✔ Hygienic Cloud Kitchen<br>✔ Authentic Home Style Taste</p>
+  <p>✔ Fresh Daily Cooking<br>✔ Hygienic Home Cloud Kitchen<br>✔ Authentic Home Style Taste</p>
 </section>
 
-<!-- CUSTOMER REVIEWS -->
+<!-- REVIEWS -->
 <section class="reviews">
   <h2>⭐ Customer Reviews</h2>
   <div class="review-card">“Amazing biryani, very hygienic!” – Ayesha ⭐⭐⭐⭐⭐</div>
@@ -85,7 +83,30 @@
   <div class="review-card">“Perfect for family orders.” – Sameer ⭐⭐⭐⭐☆</div>
 </section>
 
-<!-- BULK ORDER -->
+<!-- ABOUT US -->
+<section class="about">
+  <h2>About Us</h2>
+  <p>
+    Sadiya’s Cloud Kitchen is a home-style cloud kitchen based in <b>Ranchi (Vikrant Chowk)</b>.
+    We focus on hygienic cooking, fresh ingredients, and authentic taste just like home.
+    Every order is prepared fresh with love and care.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>📍 Vikrant Chowk, Ranchi</p>
+  <p>
+    📸 Instagram:
+    <a href="https://www.instagram.com/sadiya3168/" target="_blank">
+      @sadiya3168
+    </a>
+  </p>
+  <p>📞 Order via WhatsApp anytime</p>
+</section>
+
+<!-- BULK -->
 <section class="bulk">
   <h2>Bulk / Party Orders</h2>
   <input id="plates" type="number" placeholder="Number of Plates">
@@ -95,7 +116,7 @@
 <!-- CART -->
 <div class="cart">🛒 <span id="cart">0</span></div>
 
-<!-- STICKY BAR -->
+<!-- ORDER BAR -->
 <div class="order-bar">
   <button onclick="sendCart()">Order on WhatsApp</button>
 </div>
