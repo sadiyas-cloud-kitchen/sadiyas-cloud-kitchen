@@ -125,3 +125,30 @@ body {
   color: white;
   font-size: 18px;
 }
+
+body {
+  padding-bottom: 80px;
+  background: #fffaf4;
+}
+
+.content, .about, .contact {
+  padding: 22px;
+  margin: 15px;
+  background: #ffffff;
+  border-radius: 14px;
+}
+
+.about p, .contact p {
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.contact a {
+  color: #8b0000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
