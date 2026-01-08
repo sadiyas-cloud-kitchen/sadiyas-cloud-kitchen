@@ -5,12 +5,11 @@
 }
 
 body {
-  padding-bottom: 70px;
+  padding-bottom: 80px;
 }
 
 .hero img {
   width: 100%;
-  height: auto;
   display: block;
 }
 
@@ -20,6 +19,7 @@ body {
   justify-content: center;
   gap: 10px;
   padding: 15px;
+  flex-wrap: wrap;
 }
 
 .categories button {
@@ -43,12 +43,7 @@ body {
   border-radius: 14px;
   text-align: center;
   position: relative;
-  animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-  from { box-shadow: 0 0 5px gold; }
-  to { box-shadow: 0 0 12px gold; }
+  padding-bottom: 10px;
 }
 
 .item img {
@@ -69,7 +64,7 @@ body {
 
 .item button {
   width: 90%;
-  margin: 10px auto;
+  margin-top: 10px;
   padding: 10px;
   background: #8b0000;
   color: white;
@@ -77,13 +72,26 @@ body {
   border-radius: 8px;
 }
 
-/* Content */
-.content, .bulk {
+/* Reviews */
+.reviews {
   padding: 20px;
   text-align: center;
 }
 
+.review-card {
+  background: #fff3cd;
+  padding: 12px;
+  margin: 10px auto;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
 /* Bulk */
+.bulk {
+  padding: 20px;
+  text-align: center;
+}
+
 .bulk input {
   width: 90%;
   padding: 10px;
@@ -99,7 +107,6 @@ body {
   color: white;
   padding: 8px 12px;
   border-radius: 20px;
-  z-index: 999;
 }
 
 /* Order Bar */
@@ -109,7 +116,7 @@ body {
   width: 100%;
   background: #25d366;
   text-align: center;
-  padding: 12px;
+  padding: 14px;
 }
 
 .order-bar button {
