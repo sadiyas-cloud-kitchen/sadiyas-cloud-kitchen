@@ -172,3 +172,33 @@ body {
   line-height: 1.7;
   color: #333;
 }
+
+/* ABOUT + CONTACT SECTION STYLING */
+.about,
+.contact {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  margin: 20px 15px;
+  padding: 22px;
+  border-radius: 18px;
+  border: 2px solid #ffb300;
+  box-shadow: 0 6px 15px rgba(139, 0, 0, 0.15);
+}
+
+.about h2,
+.contact h2 {
+  color: #8b0000;
+  margin-bottom: 10px;
+}
+
+.about p,
+.contact p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #3a1f1f;
+}
+
+.contact a {
+  color: #8b0000;
+  font-weight: bold;
+  text-decoration: none;
+}
