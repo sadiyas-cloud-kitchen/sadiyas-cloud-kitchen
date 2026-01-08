@@ -5,15 +5,17 @@
 }
 
 body {
-  padding-bottom: 80px;
+  background: #fffaf4;
+  padding-bottom: 90px;
 }
 
+/* HERO */
 .hero img {
   width: 100%;
   display: block;
 }
 
-/* Categories */
+/* CATEGORY BUTTONS */
 .categories {
   display: flex;
   justify-content: center;
@@ -30,7 +32,7 @@ body {
   border-radius: 20px;
 }
 
-/* Menu */
+/* MENU */
 .menu {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -40,10 +42,12 @@ body {
 
 .item {
   border: 2px solid gold;
-  border-radius: 14px;
+  border-radius: 16px;
   text-align: center;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
 }
 
 .item img {
@@ -69,111 +73,11 @@ body {
   background: #8b0000;
   color: white;
   border: none;
-  border-radius: 8px;
-}
-
-/* Reviews */
-.reviews {
-  padding: 20px;
-  text-align: center;
-}
-
-.review-card {
-  background: #fff3cd;
-  padding: 12px;
-  margin: 10px auto;
   border-radius: 10px;
-  max-width: 90%;
 }
 
-/* Bulk */
-.bulk {
-  padding: 20px;
-  text-align: center;
-}
-
-.bulk input {
-  width: 90%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-/* Cart */
-.cart {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  background: black;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 20px;
-}
-
-/* Order Bar */
-.order-bar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #25d366;
-  text-align: center;
-  padding: 14px;
-}
-
-.order-bar button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 18px;
-}
-
-body {
-  padding-bottom: 80px;
-  background: #fffaf4;
-}
-
-.content, .about, .contact {
-  padding: 22px;
-  margin: 15px;
-  background: #ffffff;
-  border-radius: 14px;
-}
-
-.about p, .contact p {
-  line-height: 1.6;
-  font-size: 15px;
-}
-
-.contact a {
-  color: #8b0000;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-/* About Us Section Styling */
-.about {
-  background: #fff3cd; /* soft cream */
-  padding: 22px;
-  margin: 20px 15px;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.about h2 {
-  color: #8b0000;
-  margin-bottom: 10px;
-}
-
-.about p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #333;
-}
-
-/* ABOUT + CONTACT SECTION STYLING */
+/* CONTENT / ABOUT / CONTACT */
+.content,
 .about,
 .contact {
   background: linear-gradient(135deg, #fff3e0, #ffe0b2);
@@ -181,7 +85,7 @@ body {
   padding: 22px;
   border-radius: 18px;
   border: 2px solid #ffb300;
-  box-shadow: 0 6px 15px rgba(139, 0, 0, 0.15);
+  box-shadow: 0 6px 15px rgba(139,0,0,0.15);
 }
 
 .about h2,
@@ -197,8 +101,93 @@ body {
   color: #3a1f1f;
 }
 
-.contact a {
-  color: #8b0000;
+/* REVIEWS */
+.reviews {
+  padding: 20px;
+  text-align: center;
+}
+
+.review-card {
+  background: #fff3cd;
+  padding: 12px;
+  margin: 10px auto;
+  border-radius: 12px;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* INSTAGRAM BUTTON */
+.insta-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* BULK – MATCHED */
+.bulk {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  margin: 20px 15px 90px;
+  padding: 24px 18px;
+  border-radius: 22px;
+  border: 2px solid #ffb300;
+  text-align: center;
+}
+
+.bulk h2 {
+  color: #8b0000;
+  margin-bottom: 14px;
+}
+
+.bulk input {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1.5px solid #ccc;
+  margin-bottom: 12px;
+}
+
+.bulk button {
+  background: #8b0000;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+/* CART */
+.cart {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: black;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  z-index: 99;
+}
+
+/* ORDER BAR */
+.order-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #25d366;
+  text-align: center;
+  padding: 14px;
+}
+
+.order-bar button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
 }
