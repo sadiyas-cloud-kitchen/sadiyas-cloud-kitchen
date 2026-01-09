@@ -251,3 +251,36 @@ body {
     transform: translateY(0);
   }
 }
+
+/* ============================
+   SPECIAL DISHES IMAGE FIX
+   (IMPORTANT)
+============================ */
+
+/* Target special dishes cards */
+.special-dishes img,
+.special img,
+.content img {
+  width: 100%;
+  max-width: 100%;
+  height: 260px;          /* ⬅ BIGGER */
+  object-fit: contain;   /* ⬅ No cut */
+  padding: 12px;
+  background: #fff;
+}
+
+/* Card spacing improvement */
+.special-dishes,
+.special,
+.content {
+  text-align: center;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  .special-dishes img,
+  .special img,
+  .content img {
+    height: 300px;        /* ⬅ EXTRA BIG on mobile */
+  }
+}
