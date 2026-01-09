@@ -197,32 +197,29 @@ body {
   font-weight: bold;
 }
 
-/* ======================
-   GALLERY – BIG & CLEAN
-====================== */
-.gallery {
-  padding: 32px 16px;
-  text-align: center;
-}
+<section class="special-dishes">
+  <h2>Our Special Dishes</h2>
 
-.gallery h2 {
-  color: #8b0000;
-  margin-bottom: 22px;
-}
+  <div class="special-grid">
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 18px;
-}
+    <div class="special-card">
+      <img src="assets/mutton-biryani-kheema-pulao.png" alt="Mutton Biryani & Kheema Pulao">
+      <p>Mutton Biryani & Kheema Pulao</p>
+    </div>
 
-.gallery-item {
-  background: #fff;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-  animation: fadeUp 0.8s ease forwards;
-}
+    <div class="special-card">
+      <img src="assets/fried-rice-chicken-chilli.png" alt="Chicken Chilli with Fried Rice">
+      <p>Chicken Chilli with Fried Rice</p>
+    </div>
+
+    <div class="special-card">
+      <img src="assets/kesar-phirni-dessert.png" alt="Kesar Phirni">
+      <p>Kesar Phirni</p>
+    </div>
+
+  </div>
+</section>
+
 
 /* ✅ BIGGER GALLERY IMAGES – NO CUT */
 .gallery-item img {
@@ -282,5 +279,72 @@ body {
   .special img,
   .content img {
     height: 300px;        /* ⬅ EXTRA BIG on mobile */
+  }
+}
+
+/* =========================
+   SPECIAL DISHES – PREMIUM
+========================= */
+
+.special-dishes {
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.special-dishes h2 {
+  color: #8b0000;
+  margin-bottom: 22px;
+  font-size: 24px;
+}
+
+.special-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+/* Card */
+.special-card {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+  padding: 18px;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* BIG IMAGE – NO CUT */
+.special-card img {
+  width: 100%;
+  height: 320px;        /* 🔥 BIG */
+  object-fit: contain; /* ❌ No cut */
+  border-radius: 18px;
+  background: #fff;
+}
+
+/* Title */
+.special-card p {
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4a1c1c;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .special-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .special-card img {
+    height: 300px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .special-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .special-card img {
+    height: 280px;
   }
 }
