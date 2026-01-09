@@ -273,3 +273,58 @@ body {
     transform: translateY(0);
   }
 }
+
+/* =========================
+   SPECIAL DISHES SLIDER
+========================= */
+
+.special-slider {
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.special-slider h2 {
+  color: #8b0000;
+  margin-bottom: 15px;
+}
+
+.slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  min-width: 75%;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  scroll-snap-align: center;
+  padding: 12px;
+}
+
+.slide img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;   /* 🔥 NO CUT */
+  background: #fff;
+}
+
+.slide p {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #4a1c1c;
+}
+
+/* Desktop improvement */
+@media (min-width: 768px) {
+  .slide {
+    min-width: 32%;
+  }
+}
