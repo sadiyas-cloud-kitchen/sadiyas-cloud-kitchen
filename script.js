@@ -15,17 +15,17 @@ document.getElementById("heroImg").src=heroImages[i];
 },3000);
 
 /* ADD CART */
-function addToCart(name, price){
-cart.push({name,price});
-count++;
-document.getElementById("cart").innerText=count;
+function addToCart(name, price) {
+  cart.push({ name, price });
+  count++;
+  document.getElementById("cart").innerText = count;
 
-/* animation */
-let c=document.querySelector(".cart");
-c.style.transform="scale(1.2)";
-setTimeout(()=>c.style.transform="scale(1)",200);
+  const cartBox = document.querySelector(".cart");
+  cartBox.style.transform = "scale(1.2)";
+  setTimeout(() => {
+    cartBox.style.transform = "scale(1)";
+  }, 200);
 }
-
 /* FILTER */
 function filterMenu(type){
 document.querySelectorAll(".item").forEach(el=>{
