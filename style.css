@@ -1,94 +1,24 @@
-body{
-margin:0;
-font-family:Poppins;
-background:#fff;
+let cartCount=0;
+let cartItems=[];
+
+function addToCart(name,price){
+cartCount++;
+cartItems.push(name+" ₹"+price);
+document.getElementById("cart").innerText=cartCount;
 }
 
-/* HERO */
-.hero{
-position:relative;
-}
-.hero img{
-width:100%;
-height:250px;
-object-fit:cover;
-}
-.hero-text{
-position:absolute;
-bottom:20px;
-left:20px;
-color:white;
+function sendCart(){
+let msg="Order:%0A"+cartItems.join("%0A");
+window.open("https://wa.me/917549126937?text="+msg);
 }
 
-/* CATEGORY */
-.categories{
-display:flex;
-overflow:auto;
-padding:10px;
+function filterMenu(cat){
+let items=document.querySelectorAll(".item");
+items.forEach(i=>{
+if(cat==="all" || i.classList.contains(cat)){
+i.style.display="block";
+}else{
+i.style.display="none";
 }
-.categories button{
-margin:5px;
-padding:10px 15px;
-border:none;
-border-radius:20px;
-background:#eee;
-}
-
-/* MENU */
-.menu{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:10px;
-padding:10px;
-}
-
-.item{
-background:white;
-border-radius:10px;
-padding:10px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-.item:hover{
-transform:scale(1.05);
-}
-
-.item img{
-width:100%;
-border-radius:10px;
-}
-
-button{
-background:#ff4d4d;
-color:white;
-border:none;
-padding:8px;
-border-radius:5px;
-}
-
-/* CART */
-.cart{
-position:fixed;
-top:10px;
-right:10px;
-background:black;
-color:white;
-padding:10px;
-border-radius:50%;
-}
-
-/* ORDER BAR */
-.order-bar{
-position:fixed;
-bottom:0;
-width:100%;
-background:#25D366;
-text-align:center;
-padding:10px;
-}
-.order-bar button{
-background:none;
-color:white;
-font-size:18px;
-border:none;
+});
 }
