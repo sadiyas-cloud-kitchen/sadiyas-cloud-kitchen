@@ -1,124 +1,172 @@
-let cartCount=0;
-let cartItems=[];
+*{margin:0;box-sizing:border-box;font-family:Arial;}
 
-function addToCart(name,price){
-cartCount++;
-cartItems.push(name+" ₹"+price);
-document.getElementById("cart").innerText=cartCount;
+body{
+background:#fffaf4;
+padding-bottom:80px;
 }
 
-function sendCart(){
-let msg="Order:%0A"+cartItems.join("%0A");
-window.open("https://wa.me/917549126937?text="+msg);
+/* HERO */
+.hero{
+position:relative;
+}
+.hero img{
+width:100%;
+height:300px;
+object-fit:cover;
 }
 
-function filterMenu(cat){
-let items=document.querySelectorAll(".item");
-items.forEach(i=>{
-if(cat==="all" || i.classList.contains(cat)){
-i.style.display="block";
-}else{
-i.style.display="none";
+.hero-overlay{
+position:absolute;
+bottom:20px;
+left:20px;
+color:white;
 }
-});
+.hero-overlay h1{font-size:24px;}
+.hero-overlay p{font-size:14px;}
+
+/* CATEGORY */
+.categories{
+display:flex;
+justify-content:center;
+gap:10px;
+padding:15px;
 }
-/* ===== HERO IMPROVED ===== */
-.hero {
-  position: relative;
+.categories button{
+padding:10px 18px;
+background:#8b0000;
+color:white;
+border:none;
+border-radius:20px;
+transition:0.3s;
+}
+.categories button:hover{
+background:black;
+transform:scale(1.05);
 }
 
-.hero img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
+/* MENU */
+.menu{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+padding:15px;
 }
 
-/* Overlay Text */
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  color: white;
+.item{
+background:white;
+border-radius:15px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+text-align:center;
+padding-bottom:10px;
+
+opacity:0;
+transform:translateY(30px);
+transition:0.4s;
 }
 
-.hero-overlay h1 {
-  font-size: 26px;
-  font-weight: bold;
+.item.show{
+opacity:1;
+transform:translateY(0);
 }
 
-.hero-overlay p {
-  font-size: 14px;
+.item:hover{
+transform:translateY(-5px);
 }
 
-/* ===== BUTTON IMPROVEMENT ===== */
-.item button {
-  width: 92%;
-  margin-top: 12px;
-  padding: 11px;
-  background: linear-gradient(45deg,#ff4b2b,#ff6a00);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 15px;
-  transition: 0.3s;
+.item img{
+width:100%;
+height:200px;
+object-fit:contain;
 }
 
-.item button:hover {
-  transform: scale(1.05);
+.price{
+position:absolute;
+background:black;
+color:gold;
+padding:5px;
+border-radius:6px;
+margin:10px;
 }
 
-/* ===== CATEGORY BUTTONS PREMIUM ===== */
-.categories button {
-  padding: 10px 18px;
-  background: white;
-  color: #8b0000;
-  border: 2px solid #8b0000;
-  border-radius: 20px;
-  transition: 0.3s;
+.item button{
+width:90%;
+padding:10px;
+margin-top:10px;
+border:none;
+border-radius:10px;
+background:linear-gradient(45deg,#e63946,#ff6b6b);
+color:white;
 }
 
-.categories button:hover {
-  background: #8b0000;
-  color: white;
+/* CONTENT */
+.content,.contact{
+margin:15px;
+padding:20px;
+background:#fff3e0;
+border-radius:15px;
+opacity:0;
+transform:translateY(30px);
+transition:0.4s;
 }
 
-/* ===== CARD HOVER EFFECT ===== */
-.item {
-  transition: 0.3s;
+.content.show,.contact.show{
+opacity:1;
+transform:translateY(0);
 }
 
-.item:hover {
-  transform: translateY(-5px);
+/* REVIEWS */
+.reviews{
+text-align:center;
+padding:20px;
+}
+.review-card{
+background:#fff3cd;
+margin:10px;
+padding:10px;
+border-radius:10px;
+opacity:0;
+transform:translateY(30px);
+transition:0.4s;
+}
+.review-card.show{
+opacity:1;
+transform:translateY(0);
 }
 
-/* ===== SMOOTH FADE ANIMATION ===== */
-.item {
-  animation: fadeIn 0.6s ease;
+/* INSTAGRAM */
+.insta-btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
+border-radius:20px;
+background:linear-gradient(45deg,#f58529,#dd2a7b);
+color:white;
+text-decoration:none;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* CART */
+.cart{
+position:fixed;
+top:15px;
+right:15px;
+background:black;
+color:white;
+padding:8px 15px;
+border-radius:20px;
 }
 
-/* ===== WHATSAPP BAR IMPROVED ===== */
-.order-bar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: linear-gradient(45deg,#25d366,#128c7e);
-  text-align: center;
-  padding: 16px;
+/* ORDER BAR */
+.order-bar{
+position:fixed;
+bottom:0;
+width:100%;
+background:#25d366;
+text-align:center;
+padding:15px;
 }
-
-.order-bar button {
-  font-size: 18px;
-  font-weight: bold;
+.order-bar button{
+background:none;
+border:none;
+color:white;
+font-size:18px;
 }
