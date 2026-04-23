@@ -1,8 +1,3 @@
-
-
-
-script.js
-
 let cart = [];
 let count = 0;
 
