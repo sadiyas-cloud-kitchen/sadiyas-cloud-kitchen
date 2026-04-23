@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sadiya's Cloud Kitchen | Home Style Food in Ranchi</title>
-<meta name="description" content="Order hygienic home-style food in Ranchi">
-
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sadiya's Cloud Kitchen | Home Style Food in Ranchi</title>
+  <meta name="description" content="Sadiya's Cloud Kitchen in Ranchi offers hygienic, home-style kababs, meals & desserts. Order easily on WhatsApp.">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- HERO -->
 <section class="hero">
-  <img id="heroImg" src="assets/hero-biryani.png">
-
-  <div class="hero-overlay">
-    <h1>Sadiya’s Cloud Kitchen</h1>
-    <p>Fresh • Hygienic • Home Style Food</p>
-  </div>
+  <img id="heroImg" src="assets/hero-biryani.png" alt="Sadiya's Cloud Kitchen Food">
 </section>
 
-<!-- CATEGORY -->
+<!-- CATEGORY BUTTONS -->
 <div class="categories">
   <button onclick="filterMenu('all')">All</button>
   <button onclick="filterMenu('kabab')">Kababs</button>
@@ -33,76 +25,131 @@
 <!-- MENU -->
 <section class="menu">
 
-<div class="item kabab">
-<img src="assets/chicken-kabab.png">
-<span class="price">₹220</span>
-<h3>Chicken Kabab</h3>
-<button onclick="addToCart('Chicken Kabab',220)">Add</button>
-</div>
+  <div class="item kabab">
+    <img src="assets/chicken-kabab.png">
+    <span class="price">₹220</span>
+    <h3>Chicken Kabab</h3>
+    <button onclick="addToCart('Chicken Kabab',220)">Add</button>
+  </div>
 
-<div class="item kabab">
-<img src="assets/nonveg-meal.png">
-<span class="price">₹280</span>
-<h3>Non-Veg Meal</h3>
-<button onclick="addToCart('Non-Veg Meal',280)">Add</button>
-</div>
+  <div class="item kabab">
+    <img src="assets/nonveg-meal.png">
+    <span class="price">₹280</span>
+    <h3>Non-Veg Meal</h3>
+    <button onclick="addToCart('Non-Veg Meal',280)">Add</button>
+  </div>
 
-<div class="item dessert">
-<img src="assets/gajar-halwa.png">
-<span class="price">₹120</span>
-<h3>Gajar Halwa</h3>
-<button onclick="addToCart('Gajar Halwa',120)">Add</button>
-</div>
+  <div class="item dessert">
+    <img src="assets/gajar-halwa.png">
+    <span class="price">₹120</span>
+    <h3>Gajar Halwa</h3>
+    <button onclick="addToCart('Gajar Halwa',120)">Add</button>
+  </div>
 
-<div class="item dessert">
-<img src="assets/apricot-pudding.png">
-<span class="price">₹150</span>
-<h3>Apricot Pudding</h3>
-<button onclick="addToCart('Apricot Pudding',150)">Add</button>
-</div>
+  <div class="item dessert">
+    <img src="assets/apricot-pudding.png">
+    <span class="price">₹150</span>
+    <h3>Apricot Pudding</h3>
+    <button onclick="addToCart('Apricot Pudding',150)">Add</button>
+  </div>
 
-<div class="item combo">
-<span class="price">₹499</span>
-<h3>Family Combo</h3>
-<p>Chicken Kabab + Meal + Dessert</p>
-<button onclick="addToCart('Family Combo',499)">Add</button>
-</div>
+  <div class="item combo">
+    <span class="price">₹499</span>
+    <h3>Family Combo</h3>
+    <p>Chicken Kabab + Non-Veg Meal + Dessert</p>
+    <button onclick="addToCart('Family Combo',499)">Add Combo</button>
+  </div>
+
+  <div class="item combo">
+    <span class="price">₹899</span>
+    <h3>Party Combo</h3>
+    <p>3 Meals + 3 Kababs + Desserts</p>
+    <button onclick="addToCart('Party Combo',899)">Add Combo</button>
+  </div>
 
 </section>
 
-<!-- WHY -->
+<!-- WHY US -->
 <section class="content">
-<h2>Why Choose Us?</h2>
-<p>
-✔ Fresh Daily Cooking<br>
-✔ Hygienic Kitchen<br>
-✔ Authentic Taste
-</p>
+  <h2>Why Choose Us?</h2>
+  <p>
+    ✔ Fresh Daily Cooking<br>
+    ✔ Hygienic Home Cloud Kitchen<br>
+    ✔ Authentic Home-Style Taste
+  </p>
 </section>
+  
+<!-- SPECIAL DISHES SLIDER -->
+<section class="special-slider">
+  <h2>Our Special Dishes</h2>
 
+  <div class="slider">
+    <div class="slide">
+      <img src="assets/mutton-biryani-kheema-pulao.png">
+      <p>Mutton Biryani & Kheema Pulao</p>
+    </div>
+
+    <div class="slide">
+      <img src="assets/fried-rice-chicken-chilli.png">
+      <p>Chicken Chilli with Fried Rice</p>
+    </div>
+
+    <div class="slide">
+      <img src="assets/kesar-phirni-dessert.png">
+      <p>Kesar Phirni</p>
+    </div>
+
+    <div class="slide">
+      <img src="assets/mutton-gazala.png">
+      <p>Mutton Gazala</p>
+    </div>
+  </div>
+</section>
+  
 <!-- REVIEWS -->
 <section class="reviews">
-<h2>⭐ Reviews</h2>
-<div class="review-card">“Amazing food!” ⭐⭐⭐⭐⭐</div>
-<div class="review-card">“Best kababs” ⭐⭐⭐⭐⭐</div>
+  <h2>⭐ Customer Reviews</h2>
+  <div class="review-card">“Amazing biryani, very hygienic!” – Ayesha ⭐⭐⭐⭐⭐</div>
+  <div class="review-card">“Best kababs in Bangalore.” – Rahman ⭐⭐⭐⭐⭐</div>
+  <div class="review-card">“Perfect for family orders.” – Sameer ⭐⭐⭐⭐☆</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <h2>About Us</h2>
+  <p>
+    Sadiya’s Cloud Kitchen is a home-style cloud kitchen based in
+    <b>Ranchi (Vikrant Chowk)</b>.  
+    We focus on hygienic cooking, fresh ingredients, and authentic taste just like home.
+    Every order is prepared fresh with love and care.
+  </p>
 </section>
 
 <!-- CONTACT -->
 <section class="contact">
-<h2>Contact</h2>
-<p>📍 Ranchi</p>
+  <h2>Contact Us</h2>
+  <p>📍 Vikrant Chowk, Ranchi</p>
 
-<a class="insta-btn" href="https://www.instagram.com/sadiya3168/" target="_blank">
-📸 Instagram
-</a>
+  <a class="insta-btn" href="https://www.instagram.com/sadiya3168/" target="_blank">
+    📸 Follow us on Instagram
+  </a>
+
+  <p style="margin-top:10px;">📞 Order via WhatsApp anytime</p>
+</section>
+
+<!-- BULK -->
+<section class="bulk">
+  <h2>Bulk / Party Orders</h2>
+  <input id="plates" type="number" placeholder="Number of Plates">
+  <button onclick="sendQuotation()">Get Quotation</button>
 </section>
 
 <!-- CART -->
 <div class="cart">🛒 <span id="cart">0</span></div>
 
-<!-- ORDER -->
+<!-- ORDER BAR -->
 <div class="order-bar">
-<button onclick="sendCart()">Order on WhatsApp</button>
+  <button onclick="sendCart()">Order on WhatsApp</button>
 </div>
 
 <script src="script.js"></script>
